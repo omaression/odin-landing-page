@@ -61,7 +61,7 @@ section.one .container {
     display: flex;
     padding-block: 4em;
     justify-content: space-between;
-    gap: 3em;
+    gap: 5em;
 }
 
 .hero {
