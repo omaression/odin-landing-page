@@ -51,3 +51,47 @@ a {
     text-decoration: none;
     color: var(--color-sec);
 }
+
+/* Section one */
+section.one {
+    background-color: var(--color-dark);
+}
+
+section.one .container {
+    display: flex;
+    padding-block: 4em;
+    justify-content: space-between;
+    gap: 3em;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: .75em;
+    align-items: flex-start;
+}
+
+.hero h1 {
+    font-size: 2.8em;
+    color: var(--color-main);
+}
+
+.hero p {
+    color: var(--color-sec);
+    font-size: .8em;
+}
+
+.hero button {
+    padding: .35em .85em;
+    border: 1px solid var(--color-dark);
+    border-radius: 5px;
+    background-color: var(--color-btn);
+    color: var(--color-main);
+    font-size: .9em;
+}
+
+section.one img {
+    max-width: 400px;
+    max-height: 200px;
+    margin-left: auto;
+}
