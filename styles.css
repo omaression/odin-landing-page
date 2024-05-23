@@ -79,9 +79,11 @@ section.one .container {
 .hero p {
     color: var(--color-sec);
     font-size: .8em;
+    max-width: 90%;
 }
 
 .hero button {
+    margin-top: 2em;
     padding: .35em .85em;
     border: 1px solid var(--color-dark);
     border-radius: 5px;
