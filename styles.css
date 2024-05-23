@@ -95,3 +95,46 @@ section.one img {
     max-height: 200px;
     margin-left: auto;
 }
+
+/* Section two */
+section.two .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+    padding-block: 4em 5em;
+}
+
+section.two h2 {
+    font-size: 2em;
+    font-weight: 800;
+    color: var(--color-dark);
+}
+
+section.two .cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: .75em;
+    align-items: center;
+}
+
+.card img {
+    border: 2px solid var(--color-btn);
+    border-radius: 10px;
+    max-width: 180px;
+    max-height: 180px;
+}
+
+.card p {
+    max-width: 180px;
+    color: #8f8f8f;
+    text-align: center;
+}
