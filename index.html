@@ -68,7 +68,12 @@
         </div>
     </section>
     <footer class="footer">
-        <div class="container"></div>
+        <div class="container">
+            Copyright &copy; Omar Abdalla &nbsp; <span id="year"></span>
+        </div>
     </footer>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
 </body>
 </html>

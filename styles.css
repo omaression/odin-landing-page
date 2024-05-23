@@ -201,6 +201,19 @@ section.four .action-call {
     color: var(--color-main);
     font-size: .9em;
     align-self: flex-end;
-    flex: 1 0 initial;
+    flex: 0 0 6em;
     margin-left: auto;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--color-dark);
+    color: var(--color-main);
+    margin-top: auto;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: center;
+    padding-block: 1.5em;
 }
