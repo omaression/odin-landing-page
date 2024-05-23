@@ -138,3 +138,29 @@ section.two .cards-container {
     color: #8f8f8f;
     text-align: center;
 }
+
+/* Section three */
+section.three {
+    background-color: var(--color-sec);
+}
+
+section.three .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: 5em;
+    padding-inline: 14em;
+    color: var(--color-dark);
+}
+
+.quote {
+    align-self: center;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 2em;
+}
+
+.author {
+    align-self: flex-end;
+    font-weight: 800;
+}
