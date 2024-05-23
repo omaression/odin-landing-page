@@ -169,3 +169,38 @@ section.three .container {
     align-self: flex-end;
     font-weight: 800;
 }
+
+/* Section four */
+section.four .container {
+    padding: 5em;
+}
+
+section.four .action-call {
+    padding: 2em 10em;
+    background-color: var(--color-btn);
+    color: var(--color-main);
+    display: flex;
+    gap: 2em;
+    border-radius: 5px;
+}
+
+.action-call h3 {
+    font-size: 1.2em;
+}
+
+.action-call p {
+    font-size: 0.9em;
+    font-weight: 300;
+}
+
+.action-call button {
+    padding: .35em .85em;
+    border: 1px solid var(--color-main);
+    border-radius: 5px;
+    background-color: var(--color-btn);
+    color: var(--color-main);
+    font-size: .9em;
+    align-self: flex-end;
+    flex: 1 0 initial;
+    margin-left: auto;
+}
