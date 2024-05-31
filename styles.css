@@ -134,7 +134,7 @@ section.two .cards-container {
 }
 
 .card img {
-    border: 2px solid var(--color-btn);
+    border: 2px solid var(--color-dark);
     border-radius: 10px;
     max-width: 180px;
     max-height: 180px;
