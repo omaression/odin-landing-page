@@ -138,7 +138,7 @@ section.one .container {
 }
 
 section.one img {
-    max-width: 400px;
+    max-width: min(400px, 35%);
     margin-left: auto;
     border-radius: 15px;
 }
