@@ -1,5 +1,7 @@
-# odin-landing-page
+# world-religions
 
-Check out the live preview of this project on https://omaression.github.io/odin-landing-page/
+Check out the live preview of this project on https://omaression.github.io/world-religions/
 
-This project is a simple landing page using flex boxes; it was constructed as instructed by The Odin Project.
+This project is a Service Project. It is intended as an assignment for my World Religions class.
+
+Feel free to contribute to the project.
