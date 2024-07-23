@@ -3,10 +3,11 @@
 
 /* general and utilities */
 :root {
-    --color-dark: #1F2937;
-    --color-main: #F9FAF8;
-    --color-sec: #E5E7EB;
-    --color-btn: #3882F6;
+    --color-dark: #e4d1ad;
+    --color-main: #4b1e1e;
+    --color-sec: #944444;
+    --color-btn: #b19050;
+    --color-hover: #a35454;
 }
 
 * {
@@ -20,6 +21,7 @@
 body {
     display: flex;
     flex-direction: column;
+    background-color: #ece6db;
 }
 
 .container {
@@ -29,7 +31,8 @@ body {
 
 /* header */
 header {
-    background-color: var(--color-dark);
+    /* background-color: var(--color-dark); */
+    background-color: var(--color-btn);
     color: var(--color-main);
 }
 
@@ -40,18 +43,56 @@ header .container {
 }
 
 header .logo {
-    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.logo img {
+    width: 5em;
+    height: 5em;
+
+    border: 3px solid rgb(122, 70, 40);
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(87, 49, 27, 0.3); /* Offset X, Offset Y, Blur Radius, Shadow Color */
+}
+
+.logo span a {
+    text-decoration: none;
+    color: var(--color-main);
+    font-size: 1.4em;
+    font-weight: 900;
+}
+
+.logo span a:hover {
+    color: #5c2d2d;
+}
+
+.logo span a:link,
+.logo span a:active {
+    color: #863131;
 }
 
 ul {
     list-style: none;
     margin-left: auto;
     display: flex;
-    gap: 1em;
+    gap: 2em;
 }
 
-a {
+header li a {
     text-decoration: none;
+    color: var(--color-main);
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+header li a:hover {
+    color: var(--color-hover);
+}
+
+header li a:active,
+header li a:link {
     color: var(--color-sec);
 }
 
@@ -81,7 +122,7 @@ section.one .container {
 
 .hero p {
     color: var(--color-sec);
-    font-size: .8em;
+    font-size: 1em;
     max-width: 90%;
 }
 
@@ -97,10 +138,8 @@ section.one .container {
 
 section.one img {
     max-width: 400px;
-    max-height: 200px;
     margin-left: auto;
-    border-radius: 5px;
-
+    border-radius: 15px;
 }
 
 /* Section two */
@@ -115,35 +154,46 @@ section.two .container {
 section.two h2 {
     font-size: 2em;
     font-weight: 800;
-    color: var(--color-dark);
+    color: var(--color-main);
 }
 
 section.two .cards-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 4em;
     flex-wrap: wrap;
 }
 
 .card {
-    flex: 180px;
+    border: 2px solid var(--color-btn);
+    flex: 300px;
     display: flex;
     flex-direction: column;
     gap: .75em;
-    align-items: center;
+    border-radius: 11px;
+}
+
+.card:last-child {
+    max-width: 29.75%;
+    justify-self: flex-start;
 }
 
 .card img {
-    border: 2px solid var(--color-dark);
     border-radius: 10px;
-    max-width: 180px;
-    max-height: 180px;
+    height: 200px;
+    box-shadow: 0 4px 12px rgba(87, 49, 27, 0.3); /* Offset X, Offset Y, Blur Radius, Shadow Color */
 }
 
 .card p {
-    max-width: 180px;
-    color: #8f8f8f;
-    text-align: center;
+    color: var(--color-sec);
+    text-align: start;
+    padding: 0.5em 1em;
+}
+
+.card p span {
+    font-weight: 900;
+    font-size: 1.2em;
+    color: var(--color-main);
 }
 
 /* Section three */
@@ -155,6 +205,7 @@ section.three .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 1.5em;
     padding-block: 5em;
     padding-inline: 14em;
     color: var(--color-dark);
@@ -173,6 +224,11 @@ section.three .container {
 }
 
 /* Section four */
+
+section.four {
+    background-color: #c4ae88;
+}
+
 section.four .container {
     padding: 5em;
 }
@@ -182,7 +238,7 @@ section.four .action-call {
     background-color: var(--color-btn);
     color: var(--color-main);
     display: flex;
-    gap: 2em;
+    gap: 2.7em;
     border-radius: 5px;
 }
 
@@ -191,20 +247,19 @@ section.four .action-call {
 }
 
 .action-call p {
-    font-size: 0.9em;
+    font-size: 1.1em;
     font-weight: 300;
+    color: #221a0b;
 }
 
-.action-call button {
-    padding: .35em .85em;
-    border: 1px solid var(--color-main);
-    border-radius: 5px;
-    background-color: var(--color-btn);
-    color: var(--color-main);
-    font-size: .9em;
-    align-self: flex-end;
-    flex: 0 0 6em;
+.action-call a {
+    align-self: center;
     margin-left: auto;
+}
+
+.action-call img {
+    color: var(--color-main);
+    width: 3em;
 }
 
 /* Footer */
@@ -212,6 +267,8 @@ section.four .action-call {
     background-color: var(--color-dark);
     color: var(--color-main);
     margin-top: auto;
+    font-size: 1.1em;
+    font-weight: 500;
 }
 
 .footer .container {
