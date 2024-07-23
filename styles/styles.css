@@ -67,7 +67,7 @@ header .logo {
 }
 
 .logo span a:hover {
-    color: rgb(122, 30, 30);
+    color: var(--color-hover);
 }
 
 .logo span a:active {
@@ -81,7 +81,8 @@ ul {
     gap: 2em;
 }
 
-header li a {
+header li a,
+header li a:link {
     text-decoration: none;
     color: var(--color-main);
     font-size: 1.2rem;
@@ -92,9 +93,8 @@ header li a:hover {
     color: var(--color-hover);
 }
 
-header li a:active,
-header li a:link {
-    color: var(--color-sec);
+header li a:active {
+    color: var(--color-active);
 }
 
 /* Section one */
