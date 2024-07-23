@@ -1,0 +1,51 @@
+:root {
+    --color-dark: #e4d1ad;
+    --color-main: #4b1e1e;
+    --color-sec: #944444;
+    --color-btn: #b19050;
+    --color-hover: #7e4141;
+    --color-active: #863131;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+    padding-block: 4em;
+}
+
+.content h1 {
+    font-size: 2.5em;
+    color: var(--color-main);
+}
+
+.content ul {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+}
+
+.content li {
+    font-size: 1.5em;
+}
+
+.content li a,
+.content li a:link {
+    font-size: inherit;
+    text-decoration: none;
+    color: var(--color-main);
+}
+
+.content li a:hover {
+    color: var(--color-hover);
+}
+
+.content li a:active {
+    color: var(--color-active)
+}
+
+.content li span {
+    color: var(--color-main);
+    font-size: inherit;
+    font-weight: 600;
+}

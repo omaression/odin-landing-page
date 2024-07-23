@@ -7,7 +7,8 @@
     --color-main: #4b1e1e;
     --color-sec: #944444;
     --color-btn: #b19050;
-    --color-hover: #a35454;
+    --color-hover: #7e4141;
+    --color-active: #863131;
 }
 
 * {
@@ -22,6 +23,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #ece6db;
+    min-height: 100vh;
 }
 
 .container {
@@ -31,7 +33,6 @@ body {
 
 /* header */
 header {
-    /* background-color: var(--color-dark); */
     background-color: var(--color-btn);
     color: var(--color-main);
 }
@@ -57,7 +58,8 @@ header .logo {
     box-shadow: 0 4px 12px rgba(87, 49, 27, 0.3); /* Offset X, Offset Y, Blur Radius, Shadow Color */
 }
 
-.logo span a {
+.logo span a,
+.logo span a:link {
     text-decoration: none;
     color: var(--color-main);
     font-size: 1.4em;
@@ -65,12 +67,11 @@ header .logo {
 }
 
 .logo span a:hover {
-    color: #5c2d2d;
+    color: rgb(122, 30, 30);
 }
 
-.logo span a:link,
 .logo span a:active {
-    color: #863131;
+    color: var(--color-active)
 }
 
 ul {
@@ -260,6 +261,12 @@ section.four .action-call {
 .action-call img {
     color: var(--color-main);
     width: 3em;
+    transition: transform 0.5s ease, font-size 0.5s ease;
+}
+
+a:hover img {
+    transform: rotate(360deg);
+    width: 3.5em;
 }
 
 /* Footer */

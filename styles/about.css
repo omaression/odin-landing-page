@@ -1,0 +1,61 @@
+:root {
+    --color-dark: #e4d1ad;
+    --color-main: #4b1e1e;
+    --color-sec: #944444;
+    --color-btn: #b19050;
+    --color-hover: #7e4141;
+    --color-active: #863131;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+    padding-block: 4em;
+}
+
+.content h1 {
+    font-size: 2.5em;
+    color: var(--color-main);
+}
+
+.content h2 {
+    font-size: 1.25em;
+    color: var(--color-main);
+}
+
+.content p {
+    font-size: 1.1em;
+    color: var(--color-main);
+}
+
+.content section .container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35em;
+}
+
+.content ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+    list-style-type: square;
+}
+
+.content li {
+    max-width: 80%;
+}
+
+.content li span {
+    font-weight: 600;
+}
+
+p a {
+    text-decoration: none;
+    color: var(--color-active);
+    font-weight: 600;
+}
+
+p a:hover {
+    color: var(--color-btn);
+}
