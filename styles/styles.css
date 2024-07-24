@@ -155,6 +155,7 @@ section.one img {
     /* header  */
     section.one .container {
         flex-wrap: wrap;
+        padding-block: 2em;
     }
     section.one img {
         max-width: 80%;
@@ -209,6 +210,12 @@ section.two .cards-container {
     font-weight: 900;
     font-size: 1.2em;
     color: var(--color-main);
+}
+
+@media (max-width: 768px) {
+    section.two .cards-container {
+        gap: 3em;
+    }
 }
 
 /* Section three */
