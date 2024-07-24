@@ -98,7 +98,10 @@ header li a:active {
         height: 4em;
     }
     ul {
-        gap: 0.8em;
+        gap: 0.75em;
+    }
+    ul li {
+        font-size: 0.8em;
     }
 }
 
