@@ -9,6 +9,7 @@
     --color-btn: #b19050;
     --color-hover: #7e4141;
     --color-active: #863131;
+    --color-caption: #c5c3be;
 }
 
 * {
@@ -114,6 +115,7 @@ section.one .container {
     display: flex;
     padding-block: 4em;
     justify-content: space-between;
+    align-items: center;
     gap: 5em;
 }
 
@@ -145,10 +147,29 @@ section.one .container {
     font-size: .9em;
 }
 
-section.one img {
+section.one .img-container {
     max-width: 35%;
     margin-left: auto;
     border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+section.one img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+section.one .img-container::after {
+    content: "Photo by Isabella Fisher on Unsplash";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    color: var(--color-caption);
+    font-size: 0.4em;
+    padding: 1em 1.25em;
+    text-align: right;
 }
 
 @media (max-width: 768px) {
@@ -157,7 +178,7 @@ section.one img {
         flex-wrap: wrap;
         padding-block: 2em;
     }
-    section.one img {
+    section.one .img-container {
         max-width: 80%;
         margin: auto;
     }
@@ -198,6 +219,23 @@ section.two .cards-container {
 .card img {
     width: 100%;
     box-shadow: 0 4px 12px rgba(87, 49, 27, 0.3); /* Offset X, Offset Y, Blur Radius, Shadow Color */
+}
+
+.card .img-container {
+    position: relative;
+}
+
+.card .img-container::after {
+    content: attr(data-creator);
+    position: absolute;
+    bottom: 1em;
+    right: 0;
+    padding-inline: 0.5em;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--color-caption);
+    font-size: 0.4em;
+    text-align: right;
 }
 
 .card p {
