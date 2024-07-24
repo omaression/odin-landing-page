@@ -176,7 +176,7 @@ section.two h2 {
 
 section.two .cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 4em;
 }
 
@@ -193,7 +193,6 @@ section.two .cards-container {
 
 .card img {
     width: 100%;
-    max-height: 25%;
     box-shadow: 0 4px 12px rgba(87, 49, 27, 0.3); /* Offset X, Offset Y, Blur Radius, Shadow Color */
 }
 
