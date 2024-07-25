@@ -215,11 +215,27 @@ section.two .cards-container {
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(87, 49, 27, 0.3);
     height: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.cards-container a,
+.cards-container a:link {
+    text-decoration: none;
+}
+
+.card:hover,
+.card:active {
+    transform: scale(1.05);
 }
 
 .card img {
     width: 100%;
     box-shadow: 0 4px 12px rgba(87, 49, 27, 0.3); /* Offset X, Offset Y, Blur Radius, Shadow Color */
+}
+
+.card:hover img,
+.card:active img {
+    width: 100%;
 }
 
 .card .img-container {

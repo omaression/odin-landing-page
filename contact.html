@@ -8,17 +8,7 @@
     <link rel="stylesheet" href="styles/contact.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="logo"><img src="./imgs/world_religions_logo.png" alt="logo depicting some of the symbols of world religions">
-            </div>
-            <ul>
-                <li><a href="https://omaression.github.io/world-religions/">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./contact.html">Contact Us</a></li>
-            </ul>
-        </div>
-    </header>
+    <header class="header" id="header"></header>
     <section>
         <div class="container">
             <div class="content">
@@ -31,13 +21,20 @@
             </div>
         </div>
     </section>
-    <footer class="footer">
-        <div class="container">
-            Copyrights &copy; Omar Abdalla &nbsp; <span id="year"></span>
-        </div>
-    </footer>
+    <footer class="footer" id="footer"></footer>
     <script>
-        document.getElementById("year").innerHTML = new Date().getFullYear();
+        fetch('./utilities/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('#header').innerHTML = data;
+            });
+        
+        fetch('./utilities/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('#footer').innerHTML = data;
+                document.getElementById("year").innerHTML = new Date().getFullYear();
+            });
     </script>
 </body>
 </html>

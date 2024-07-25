@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Religions - Confucianism</title>
+    <link rel="stylesheet" href="./../styles/styles.css">
+    <link rel="icon" href="./../imgs/world_religions_logo.png" type="image/x-icon">
+</head>
+<body>
+    <header class="header" id="header"></header>
+    <div class="content">here</div>
+    <footer class="footer" id="footer"></footer>
+    <script>
+        fetch('./../utilities/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('#header').innerHTML = data;
+            });
+        
+        fetch('./../utilities/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('#footer').innerHTML = data;
+                document.getElementById("year").innerHTML = new Date().getFullYear();
+            });
+    </script>
+</body>
+</html>
