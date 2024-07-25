@@ -177,6 +177,7 @@ section.one .img-container::after {
     section.one .container {
         flex-wrap: wrap;
         padding-block: 2em;
+        gap: 2em;
     }
     section.one .img-container {
         max-width: 80%;
