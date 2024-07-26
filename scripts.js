@@ -27,43 +27,43 @@ document.addEventListener('DOMContentLoaded', function() {
 function setNavLinks() {
     const path = window.location.pathname;
     const hrefs = {
-        '/': {
+        '/world-religions/': {
             about: './about.html',
             contact: './contact.html'
         },
-        '/about.html': {
+        '/world-religions/about.html': {
             about: './about.html',
             contact: './contact.html'
         },
-        '/contact.html': {
+        '/world-religions/contact.html': {
             about: './about.html',
             contact: './contact.html'
         },
-        '/religions/christianity.html': {
+        '/world-religions/religions/christianity.html': {
             about: './../about.html',
             contact: './../contact.html'
         },
-        '/religions/islam.html': {
+        '/world-religions/religions/islam.html': {
             about: './../about.html',
             contact: './../contact.html'
         },
-        '/religions/confucianism.html': {
+        '/world-religions/religions/confucianism.html': {
             about: './../about.html',
             contact: './../contact.html'
         },
-        '/religions/hinduism.html': {
+        '/world-religions/religions/hinduism.html': {
             about: './../about.html',
             contact: './../contact.html'
         },
-        '/religions/buddhism.html': {
+        '/world-religions/religions/buddhism.html': {
             about: './../about.html',
             contact: './../contact.html'
         },
-        '/religions/judaism.html': {
+        '/world-religions/religions/judaism.html': {
             about: './../about.html',
             contact: './../contact.html'
         },
-        '/religions/taoism.html': {
+        '/world-religions/religions/taoism.html': {
             about: './../about.html',
             contact: './../contact.html'
         }
