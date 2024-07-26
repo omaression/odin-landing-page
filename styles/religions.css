@@ -1,0 +1,63 @@
+.content {
+    color: var(--color--darkest);
+    display: flex;
+    flex-direction: column;
+}
+
+.content section:nth-child(even) {
+    background-color: var(--color-dark);
+    color: var(--color-main);
+}
+
+.out-of-container {
+    padding-block: 2em;
+}
+
+.title-container {
+    width: 100%;
+}
+
+.title {
+    font-size: 3em;
+    font-weight: 900;
+}
+
+section {
+    padding: 4em 2em;
+}
+
+section h2 {
+    font-size: 1.5em;
+    padding-bottom: 0.75em;
+}
+
+section p {
+    font-size: 1.1em;
+}
+
+section .container > *:not(h2) {
+    margin-left: 1em;
+}
+
+section ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+section ul span {
+    font-weight: 700;
+    margin-right: 0.4em;
+}
+
+section ul ul {
+    margin-left: 2em;
+    margin-block: 0.75em 1em;
+    list-style-type: square;
+}
+
+section ul li,
+section ul ul li {
+    font-size: 1em;
+}
