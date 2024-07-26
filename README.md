@@ -1,4 +1,6 @@
-# world-religions
+## world-religions
+
+# The project is still under development.
 
 Check out the live preview of this project on https://omaression.github.io/world-religions/
 
