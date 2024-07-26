@@ -1,11 +1,12 @@
 :root {
-    --color-dark: #e4d1ad;
-    --color-main: #4b1e1e;
-    --color-sec: #944444;
-    --color-btn: #b19050;
-    --color-hover: #7e4141;
-    --color-active: #863131;
+    --color-main: #ffffff;
+    --color-dark: #30435A;
+    --color-sec: #425C7C;
+    --color-btn: #668EC0;
+    --color-hover: #6a97cf;
+    --color-active: #425C7C;
     --color-caption: #c5c3be;
+    --color--darkest: #1f2d3d;
 }
 
 .content {
@@ -13,6 +14,7 @@
     flex-direction: column;
     gap: 2.5em;
     padding-block: 4em;
+    color: var(--color--darkest);
 }
 
 @media (max-width: 768px) {
@@ -23,7 +25,6 @@
 
 .content h1 {
     font-size: 2.5em;
-    color: var(--color-main);
 }
 
 .content ul {
@@ -40,7 +41,7 @@
 .content li a:link {
     font-size: inherit;
     text-decoration: none;
-    color: var(--color-main);
+    color: var(--color-sec);
 }
 
 .content li a:hover {
@@ -52,7 +53,6 @@
 }
 
 .content li span {
-    color: var(--color-main);
     font-size: inherit;
     font-weight: 600;
 }

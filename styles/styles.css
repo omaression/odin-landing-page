@@ -3,13 +3,14 @@
 
 /* general and utilities */
 :root {
-    --color-dark: #e4d1ad;
-    --color-main: #4b1e1e;
-    --color-sec: #944444;
-    --color-btn: #b19050;
-    --color-hover: #7e4141;
-    --color-active: #863131;
+    --color-main: #ffffff;
+    --color-dark: #30435A;
+    --color-sec: #425C7C;
+    --color-btn: #668EC0;
+    --color-hover: #6a97cf;
+    --color-active: #425C7C;
     --color-caption: #c5c3be;
+    --color--darkest: #1f2d3d;
 }
 
 * {
@@ -24,7 +25,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #ece6db;
+    background-color: var(--color-caption);
 }
 
 .container {
@@ -35,8 +36,7 @@ body {
 
 /* header */
 header {
-    background-color: var(--color-btn);
-    color: var(--color-main);
+    background-color: var(--color--darkest);
 }
 
 header .container {
@@ -52,22 +52,6 @@ header .container {
     border: 3px solid rgb(122, 70, 40);
     border-radius: 50%;
     box-shadow: 0 4px 12px rgba(87, 49, 27, 0.3); /* Offset X, Offset Y, Blur Radius, Shadow Color */
-}
-
-.logo span a,
-.logo span a:link {
-    text-decoration: none;
-    color: var(--color-main);
-    font-size: 1.4em;
-    font-weight: 900;
-}
-
-.logo span a:hover {
-    color: var(--color-hover);
-}
-
-.logo span a:active {
-    color: var(--color-active)
 }
 
 ul {
@@ -132,7 +116,7 @@ section.one .container {
 }
 
 .hero p {
-    color: var(--color-sec);
+    color: var(--color-caption);
     font-size: 1em;
     max-width: 90%;
 }
@@ -197,7 +181,7 @@ section.two .container {
 section.two h2 {
     font-size: 2em;
     font-weight: 800;
-    color: var(--color-main);
+    color: var(--color-dark);
 }
 
 section.two .cards-container {
@@ -207,7 +191,8 @@ section.two .cards-container {
 }
 
 .card {
-    border: 2px solid var(--color-btn);
+    border: 2px solid var(--color-sec);
+    background-color: var(--color-sec);
     display: flex;
     flex-direction: column;
     gap: .75em;
@@ -256,7 +241,7 @@ section.two .cards-container {
 }
 
 .card p {
-    color: var(--color-sec);
+    color: var(--color-caption);
     text-align: start;
     padding: 0.75em 1em 2em;
 }
@@ -285,7 +270,7 @@ section.three .container {
     gap: 1.5em;
     padding-block: 5em;
     padding-inline: 14em;
-    color: var(--color-dark);
+    color: var(--color-caption);
 }
 
 .quote {
@@ -298,6 +283,7 @@ section.three .container {
 .author {
     align-self: flex-end;
     font-weight: 800;
+    color: var(--color-main);
 }
 
 @media (max-width: 768px) {
@@ -309,7 +295,7 @@ section.three .container {
 /* Section four */
 
 section.four {
-    background-color: #c4ae88;
+    background-color: var(--color-caption);
 }
 
 section.four .container {
@@ -363,7 +349,7 @@ a:hover img {
 
 /* Footer */
 .footer {
-    background-color: var(--color-dark);
+    background-color: var(--color--darkest);
     color: var(--color-main);
     margin-top: auto;
     font-size: 1.1em;
