@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         path.includes('/religions/')
         ? './../utilities/header.html'
         : './utilities/header.html'
-    )
+        )
         .then(response => response.text())
         .then(data => {
             document.querySelector('#header').innerHTML = data;
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         path.includes('/religions/')
         ? './../utilities/footer.html'
         : './utilities/footer.html'
-    )
+        )
         .then(response => response.text())
         .then(data => {
             document.querySelector('#footer').innerHTML = data;
