@@ -74,6 +74,10 @@ section ul ul li {
     font-size: 1em;
 }
 
+section a {
+    word-wrap: break-word;
+}
+
 section a,
 section a:link {
     color: var(--color-btn);
