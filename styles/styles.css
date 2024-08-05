@@ -329,7 +329,7 @@ section.four .action-call {
 .action-call img {
     color: var(--color-main);
     width: 3em;
-    transition: transform 0.5s ease, font-size 0.5s ease;
+    transition: transform 0.5s ease;
 }
 
 a:hover img {
@@ -344,6 +344,13 @@ a:hover img {
     section.four .action-call {
         padding: 2em;
         gap: 1em;
+    }
+    .action-call img {
+        transition: transform 1s ease;
+    }
+    .rotate {
+        transform: rotate(360deg);
+        width: 3.5em;
     }
 }
 

@@ -1,3 +1,4 @@
+// Utilities Linking
 document.addEventListener('DOMContentLoaded', function() {
     const path = window.location.pathname
 
@@ -74,3 +75,9 @@ function setNavLinks() {
         document.querySelector('#contact').setAttribute('href', hrefs[path].contact);
     }
 }
+
+// Animation for GitHub icon on phones
+const icon = document.querySelector('#github_icon');
+document.addEventListener('scrollend', function(e) {
+    icon.classList.toggle('rotate');
+})
