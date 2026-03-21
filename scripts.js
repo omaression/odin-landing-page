@@ -27,53 +27,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function setNavLinks() {
     const path = window.location.pathname;
-    const hrefs = {
-        '/world-religions/': {
-            about: './about.html',
-            contact: './contact.html'
-        },
-        '/world-religions/about.html': {
-            about: './about.html',
-            contact: './contact.html'
-        },
-        '/world-religions/contact.html': {
-            about: './about.html',
-            contact: './contact.html'
-        },
-        '/world-religions/religions/christianity.html': {
-            about: './../about.html',
-            contact: './../contact.html'
-        },
-        '/world-religions/religions/islam.html': {
-            about: './../about.html',
-            contact: './../contact.html'
-        },
-        '/world-religions/religions/confucianism.html': {
-            about: './../about.html',
-            contact: './../contact.html'
-        },
-        '/world-religions/religions/hinduism.html': {
-            about: './../about.html',
-            contact: './../contact.html'
-        },
-        '/world-religions/religions/buddhism.html': {
-            about: './../about.html',
-            contact: './../contact.html'
-        },
-        '/world-religions/religions/judaism.html': {
-            about: './../about.html',
-            contact: './../contact.html'
-        },
-        '/world-religions/religions/taoism.html': {
-            about: './../about.html',
-            contact: './../contact.html'
-        }
-    };
-
-    if (hrefs[path]) {
-        document.querySelector('#about').setAttribute('href', hrefs[path].about);
-        document.querySelector('#contact').setAttribute('href', hrefs[path].contact);
-    }
+    
+    // Determine base path for relative links
+    const isReligionPage = path.includes('/religions/');
+    
+    const aboutHref = isReligionPage ? './../about.html' : './about.html';
+    const contactHref = isReligionPage ? './../contact.html' : './contact.html';
+    
+    document.querySelector('#about').setAttribute('href', aboutHref);
+    document.querySelector('#contact').setAttribute('href', contactHref);
 }
 
 // Animation for GitHub icon on phones
