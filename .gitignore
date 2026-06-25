@@ -1,0 +1,10 @@
+# Vercel
+.vercel
+
+# macOS / Windows artifacts
+.DS_Store
+*:Zone.Identifier
+
+# Test artifacts
+.playwright-mcp
+*.jpeg

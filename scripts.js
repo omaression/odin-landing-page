@@ -38,8 +38,10 @@ function setNavLinks() {
     document.querySelector('#contact').setAttribute('href', contactHref);
 }
 
-// Animation for GitHub icon on phones
+// Animation for GitHub icon on phones (only present on the home page)
 const icon = document.querySelector('#github_icon');
-document.addEventListener('scrollend', function(e) {
-    icon.classList.toggle('rotate');
-})
+if (icon) {
+    document.addEventListener('scrollend', function(e) {
+        icon.classList.toggle('rotate');
+    });
+}

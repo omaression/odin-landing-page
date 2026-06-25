@@ -1,5 +1,61 @@
-/* Import Poppins font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Poppins — self-hosted (latin subset) to avoid a render-blocking cross-origin request.
+   Only the weights/styles actually used in this stylesheet are included. */
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("/fonts/poppins-300.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/fonts/poppins-400.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("/fonts/poppins-600.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/fonts/poppins-700.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url("/fonts/poppins-800.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("/fonts/poppins-900.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: "Poppins";
+    font-style: italic;
+    font-weight: 200;
+    font-display: swap;
+    src: url("/fonts/poppins-200-italic.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 /* general and utilities */
 :root {
@@ -28,6 +84,17 @@ body {
     background-color: var(--color-caption);
 }
 
+/* images keep their aspect ratio from width/height attrs (prevents layout shift) */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* <picture> wraps the <img> without adding a layout box, so existing img rules apply */
+picture {
+    display: contents;
+}
+
 .container {
     max-width: 1200px;
     margin: auto;
@@ -37,6 +104,8 @@ body {
 /* header */
 header {
     background-color: var(--color--darkest);
+    /* reserve height so the fetch-injected header doesn't cause layout shift */
+    min-height: 112px;
 }
 
 header .container {
@@ -78,6 +147,9 @@ header li a:active {
 }
 
 @media (max-width: 768px) {
+    header {
+        min-height: 96px;
+    }
     .logo img {
         width: 4em;
         height: 4em;
@@ -241,7 +313,8 @@ section.two .cards-container {
 }
 
 .card p {
-    color: var(--color-caption);
+    /* slightly lighter than --color-caption to meet WCAG AA (4.5:1) on the card background */
+    color: #dad8d3;
     text-align: start;
     padding: 0.75em 1em 2em;
 }
@@ -361,6 +434,8 @@ a:hover img {
     margin-top: auto;
     font-size: 1.1em;
     font-weight: 600;
+    /* reserve height so the fetch-injected footer doesn't cause layout shift */
+    min-height: 72px;
 }
 
 .footer .container {
